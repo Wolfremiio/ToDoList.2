@@ -10,6 +10,10 @@ def create_app():
 
     # Blueprint register
 
+    from . import todo
+
+    app.register_blueprint(todo.bp)
+
     @app.route("/")
     def index():
         return "Hola Mundo"
