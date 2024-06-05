@@ -6,10 +6,7 @@ def create_app():
 
     #  Project settings
 
-    app.config.from_maping(
-        DEBUG=True,
-        secret_key="dev",
-    )
+    app.config.from_mapping(DEBUG=True, SECRETE_KEY="dev")
 
     @app.route("/")
     def index():
