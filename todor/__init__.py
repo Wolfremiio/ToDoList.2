@@ -14,6 +14,10 @@ def create_app():
 
     app.register_blueprint(todo.bp)
 
+    from . import auth
+
+    app.register_blueprint(auth.bp)
+
     @app.route("/")
     def index():
         return "Hola Mundo"
