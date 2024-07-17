@@ -18,7 +18,7 @@ def _repr_(self):
 
 class Todo(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    created_by = db.Column(db.Integer, db.models.ForeignKey("user.id"), nullable=False)
+    created_by = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
     title = db.Column(db.String(100), nullable=False)
     desc = db.Column(db.Text)
     state = db.Column(db.Boolean, default=False)
